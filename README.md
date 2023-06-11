@@ -83,13 +83,13 @@ runBlocking {
     }
     
     // Getting all Paper builds for Minecraft 1.20
-    println(paper.project(ProjectType.PAPER)
+    println(javaPaper.project(ProjectType.PAPER)
         .version("1.20")
         .builds.joinToString()
     ) // OUTPUT: 1, 2, 3, 4 ....
     
     // Download latest Paper build for Minecraft 1.20 in downloads folder
-    paper.builds(ProjectType.PAPER, "1.20")
+    javaPaper.builds(ProjectType.PAPER, "1.20")
         .builds.last().downloads.application
         .downloadAutoName(Path.of("downloads"))
         .percentage { percent, speed -> // OPTIONAL
