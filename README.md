@@ -21,6 +21,7 @@ Simple Kotlin/Java Paper API implementation
 <a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/maven.png" alt="Maven" draggable="false">
 </a><br/>
+<p> </p>
 
 ```xml
 <repository>
@@ -40,6 +41,7 @@ Simple Kotlin/Java Paper API implementation
 <a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false">
 </a><br/>
+<p> </p>
 
 ```kotlin
 maven("https://jitpack.io")
@@ -52,6 +54,7 @@ implementation("com.github.VolanDeMor1:JavaPaper:VERSION")
 <br/>
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false">
 </a><br/>
+<p> </p>
 
 ```groovy
 maven { url 'https://jitpack.io' }
@@ -68,6 +71,7 @@ implementation 'com.github.VolanDeMor1:JavaPaper:VERSION'
 <a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/kotlin.png" alt="Kotlin" draggable="false">
 </a><br/>
+<p> </p>
 
 ```kotlin
 val javaPaper = JavaPaper()

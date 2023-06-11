@@ -4,6 +4,7 @@ val ktorVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.8.21"
+    id("org.jetbrains.dokka") version "1.8.20"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -45,6 +46,8 @@ tasks.compileJava {
 }
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    withJavadocJar()
+    withSourcesJar()
 }
 
 kotlin {
@@ -52,4 +55,8 @@ kotlin {
 }
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "17"
+}
+
+tasks.dokkaHtml {
+    outputDirectory.set(buildDir.resolve("docs/"))
 }
