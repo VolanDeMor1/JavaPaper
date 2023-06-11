@@ -16,37 +16,35 @@ class VersionGroupBuildsDeserializer : JsonDeserializer<VersionGroupBuilds> {
         context: JsonDeserializationContext
     ): VersionGroupBuilds {
         val jsonObject = json.asJsonObject
-        val projectType = ProjectType.valueOf(jsonObject.get("project_id").asString.uppercase())
-        val projectName = jsonObject.get("project_name").asString
-        val versionGroup = jsonObject.get("version_group").asString
+        val projectType = ProjectType.valueOf(jsonObject["project_id"].asString.uppercase())
+        val projectName = jsonObject["project_name"].asString
+        val versionGroup = jsonObject["version_group"].asString
         val versions = jsonObject.getAsJsonArray("versions").map { it.asString }.toTypedArray()
 
-        val buildsArray = jsonObject.getAsJsonArray("builds")
-        val builds = buildsArray.map {
+        val builds = jsonObject.getAsJsonArray("builds").map {
             val buildObject = it.asJsonObject
-            val version = buildObject.get("version").asString
-            val build = buildObject.get("build").asInt
-            val time = buildObject.get("time").asString
-            val channel = buildObject.get("channel").asString
-            val promoted = buildObject.get("promoted").asBoolean
-            val changesArray = buildObject.getAsJsonArray("changes")
-            val changes = context.deserialize<Array<Change>>(changesArray, Array<Change>::class.java)
-            val downloadsJson = buildObject.getAsJsonObject("downloads")
+            val version = buildObject["version"].asString
+            val build = buildObject["build"].asInt
+            val time = buildObject["time"].asString
+            val channel = buildObject["channel"].asString
+            val promoted = buildObject["promoted"].asBoolean
+            val changes = context.deserialize<Array<Change>>(buildObject.getAsJsonArray("changes"), Array<Change>::class.java)
 
+            val downloadsJson = buildObject.getAsJsonObject("downloads")
             val downloads = Downloads(
-                application = mapDownload(build, projectType, projectName, version, downloadsJson.getAsJsonObject("application")),
-                mojangMappings = mapDownload(build, projectType, projectName, version, downloadsJson.getAsJsonObject("mojang-mappings"))
+                mapDownload(build, projectType, projectName, version, downloadsJson["application"].asJsonObject),
+                mapDownload(build, projectType, projectName, version, downloadsJson["mojang-mappings"].asJsonObject)
             )
 
-            return@map Build(projectType, projectName, version, build, time, channel, promoted, changes, downloads)
+            Build(projectType, projectName, version, build, time, channel, promoted, changes, downloads)
         }.toTypedArray()
 
         return VersionGroupBuilds(projectType, projectName, versionGroup, versions, builds)
     }
 
     private fun mapDownload(build: Int, projectType: ProjectType, projectName: String, version: String, json: JsonObject): Download {
-        val name = json.get("name").asString
-        val sha256 = json.get("sha256").asString
+        val name = json["name"].asString
+        val sha256 = json["sha256"].asString
 
         return Download(name, sha256, build, projectType, projectName, version)
     }
