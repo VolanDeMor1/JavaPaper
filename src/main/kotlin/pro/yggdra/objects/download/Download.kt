@@ -28,6 +28,15 @@ class Download (
     private val downloadTemplate = "https://api.papermc.io/%s/projects/%s/versions/%s/builds/%s/downloads/%s"
     val downloadLink = downloadTemplate.format(JavaPaper.get().apiVersion, projectType.id(), version, build, name)
 
+    fun downloadAutoName(folder: File) = downloadAutoName(folder, {_,_->}, {})
+    fun downloadAutoName(folder: File, after: Runnable) = downloadAutoName(folder, {_,_->}, after)
+    fun downloadAutoName(folder: File, percentage: (percent: Long, speed: Float) -> Unit) = downloadAutoName(folder, percentage) {}
+    fun downloadAutoName(folder: File, percentage: (percent: Long, speed: Float) -> Unit, after: Runnable): DownloadAction {
+        val destination = Path.of(folder.absolutePath + File.separator + name)
+        destination.toFile().mkdirs()
+        return download(destination, percentage, after)
+    }
+
     fun downloadAutoName(folder: Path) = downloadAutoName(folder, {_,_->}, {})
     fun downloadAutoName(folder: Path, after: Runnable) = downloadAutoName(folder, {_,_->}, after)
     fun downloadAutoName(folder: Path, percentage: (percent: Long, speed: Float) -> Unit) = downloadAutoName(folder, percentage) {}

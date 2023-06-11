@@ -9,15 +9,17 @@ import io.ktor.serialization.gson.*
 import pro.yggdra.objects.*
 import pro.yggdra.util.BuildsDeserializer
 import pro.yggdra.util.Messenger
+import pro.yggdra.util.VersionGroupBuildsDeserializer
 
 class JavaPaper(
     val apiVersion: String? = "v2",
-    val info: Boolean = true
+    info: Boolean = true
 ) {
     private var client: HttpClient = HttpClient(CIO) {
         install(ContentNegotiation) {
             gson {
                 registerTypeAdapter(Builds::class.java, BuildsDeserializer())
+                registerTypeAdapter(VersionGroupBuilds::class.java, VersionGroupBuildsDeserializer())
             }
         }
     }
@@ -57,6 +59,22 @@ class JavaPaper(
     suspend fun builds(projectType: String, version: String): Builds {
         val response = client.get("https://api.papermc.io/$apiVersion/projects/$projectType/versions/$version/builds")
         return response.body<Builds>()
+    }
+
+    suspend fun versionGroup(projectType: ProjectType, family: String)
+            = versionGroup(projectType.name.lowercase(), family)
+
+    suspend fun versionGroup(projectType: String, family: String): VersionGroup {
+        val response = client.get("https://api.papermc.io/$apiVersion/projects/$projectType/version_group/$family")
+        return response.body<VersionGroup>()
+    }
+
+    suspend fun versionGroupBuilds(projectType: ProjectType, family: String)
+            = versionGroupBuilds(projectType.name.lowercase(), family)
+
+    suspend fun versionGroupBuilds(projectType: String, family: String): VersionGroupBuilds {
+        val response = client.get("https://api.papermc.io/$apiVersion/projects/$projectType/version_group/$family/builds")
+        return response.body<VersionGroupBuilds>()
     }
 
     fun close() {

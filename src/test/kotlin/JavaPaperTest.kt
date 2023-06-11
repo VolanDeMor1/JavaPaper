@@ -45,10 +45,22 @@ class JavaPaperTest {
     }
 
     @Test
-    fun download() {
+    fun versionGroup() {
         runBlocking {
-            val builds = paper.builds(ProjectType.PAPER, "1.20")
-            builds.builds.last().downloads.application.downloadAutoName(Path.of("downloads")).start()
+            val group = paper.versionGroup(ProjectType.PAPER, "1.19")
+            group.versions.forEach {
+                println(it)
+            }
+        }
+    }
+
+    @Test
+    fun versionGroupBuilds() {
+        runBlocking {
+            val builds = paper.versionGroupBuilds(ProjectType.PAPER, "1.19")
+            builds.builds.forEach {
+                println(it.time)
+            }
         }
     }
 

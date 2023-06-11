@@ -6,10 +6,11 @@ plugins {
     kotlin("jvm") version "1.8.21"
     id("org.jetbrains.dokka") version "1.8.20"
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("maven-publish")
 }
 
 group = "pro.yggdra"
-version = "1.0.2"
+version = "1.1"
 
 repositories {
     mavenCentral()
@@ -25,6 +26,28 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/VolanDeMor1/JavaPaper")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            groupId = groupId
+            artifactId = "javapaper"
+            version = version
+
+            from(components["java"])
+        }
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
@@ -38,7 +61,7 @@ tasks.jar {
 
 tasks.shadowJar {
     minimize()
-    archiveBaseName.set("java-paper")
+    archiveBaseName.set("javapaper")
 }
 
 tasks.compileJava {
