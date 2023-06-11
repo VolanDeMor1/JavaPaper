@@ -31,6 +31,7 @@ Simple Kotlin/Java Paper API implementation
 </dependency>
 ```
 
+<br/>
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false">
 
 ```groovy
@@ -40,6 +41,7 @@ maven("https://jitpack.io")
 implementation("com.github.VolanDeMor1:JavaPaper:VERSION")
 ```
 
+<br/>
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false">
 
 ```groovy
