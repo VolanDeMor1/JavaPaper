@@ -23,7 +23,7 @@ class JavaPaperTest {
     @Test
     fun project() {
         runBlocking {
-            val project = paper.project("paper")
+            val project = paper.project(ProjectType.PAPER)
             println(project.version("1.19").builds.joinToString())
         }
     }
