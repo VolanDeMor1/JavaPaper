@@ -12,9 +12,11 @@ Simple Kotlin/Java Paper API implementation
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white)
 </div>
 
-# Installation 
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/installation.png" alt="Installation" draggable="false">
+<br/><br/>
 
-### Maven
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/maven.png" alt="Maven" draggable="false">
+
 ```maven
 <repository>
     <id>jitpack.io</id>
@@ -28,17 +30,21 @@ Simple Kotlin/Java Paper API implementation
     <version>VERSION</version>
 </dependency>
 ```
-### Gradle
-```groovy
-maven { url 'https://jitpack.io' }
-```
-```groovy
-implementation 'com.github.VolanDeMor1:JavaPaper:VERSION'
-```
-### Gradle Kotlin
+
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false">
+
 ```groovy
 maven("https://jitpack.io")
 ```
 ```groovy
 implementation("com.github.VolanDeMor1:JavaPaper:VERSION")
+```
+
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false">
+
+```groovy
+maven { url 'https://jitpack.io' }
+```
+```groovy
+implementation 'com.github.VolanDeMor1:JavaPaper:VERSION'
 ```
