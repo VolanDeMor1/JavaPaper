@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://asgard.lol/escapetime">
+<a href="#">
   <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/banner.png" alt="JavaPaperAPI" draggable="false">
 </a>
 <br/><br/>
@@ -12,10 +12,14 @@ Simple Kotlin/Java Paper API implementation
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white)
 </div>
 
+<a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/installation.png" alt="Installation" draggable="false">
-<br/><br/>
+</a>
+<br/>
 
+<a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/maven.png" alt="Maven" draggable="false">
+</a>
 
 ```maven
 <repository>
@@ -32,7 +36,9 @@ Simple Kotlin/Java Paper API implementation
 ```
 
 <br/>
+<a href="#">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false">
+</a>
 
 ```groovy
 maven("https://jitpack.io")
@@ -41,8 +47,10 @@ maven("https://jitpack.io")
 implementation("com.github.VolanDeMor1:JavaPaper:VERSION")
 ```
 
+<a href="#">
 <br/>
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false">
+</a>
 
 ```groovy
 maven { url 'https://jitpack.io' }
