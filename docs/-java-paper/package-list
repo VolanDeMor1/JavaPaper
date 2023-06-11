@@ -23,6 +23,10 @@ $dokka.location:pro.yggdra.objects.download/Download/download/#java.nio.file.Pat
 $dokka.location:pro.yggdra.objects.download/Download/download/#java.nio.file.Path#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]#java.lang.Runnable/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download.html
 $dokka.location:pro.yggdra.objects.download/Download/download/#java.nio.file.Path#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download.html
 $dokka.location:pro.yggdra.objects.download/Download/download/#java.nio.file.Path/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download.html
+$dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.io.File#java.lang.Runnable/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
+$dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.io.File#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]#java.lang.Runnable/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
+$dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.io.File#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
+$dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.io.File/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
 $dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.nio.file.Path#java.lang.Runnable/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
 $dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.nio.file.Path#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]#java.lang.Runnable/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
 $dokka.location:pro.yggdra.objects.download/Download/downloadAutoName/#java.nio.file.Path#kotlin.Function2[kotlin.Long,kotlin.Float,kotlin.Unit]/PointingToDeclaration/-java-paper/pro.yggdra.objects.download/-download/download-auto-name.html
@@ -82,6 +86,15 @@ $dokka.location:pro.yggdra.objects/Version/builds/#/PointingToDeclaration/-java
 $dokka.location:pro.yggdra.objects/Version/projectName/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version/project-name.html
 $dokka.location:pro.yggdra.objects/Version/projectType/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version/project-type.html
 $dokka.location:pro.yggdra.objects/Version/version/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version/version.html
+$dokka.location:pro.yggdra.objects/VersionGroup///PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/index.html
+$dokka.location:pro.yggdra.objects/VersionGroup/VersionGroup/#pro.yggdra.objects.ProjectType#kotlin.String#kotlin.String#kotlin.Array[kotlin.String]/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/-version-group.html
+$dokka.location:pro.yggdra.objects/VersionGroup/projectName/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/project-name.html
+$dokka.location:pro.yggdra.objects/VersionGroup/projectType/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/project-type.html
+$dokka.location:pro.yggdra.objects/VersionGroup/versionGroups/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/version-groups.html
+$dokka.location:pro.yggdra.objects/VersionGroup/versions/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group/versions.html
+$dokka.location:pro.yggdra.objects/VersionGroupBuilds///PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group-builds/index.html
+$dokka.location:pro.yggdra.objects/VersionGroupBuilds/VersionGroupBuilds/#pro.yggdra.objects.ProjectType#kotlin.String#kotlin.String#kotlin.Array[kotlin.String]#kotlin.Array[pro.yggdra.objects.Build]/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group-builds/-version-group-builds.html
+$dokka.location:pro.yggdra.objects/VersionGroupBuilds/builds/#/PointingToDeclaration/-java-paper/pro.yggdra.objects/-version-group-builds/builds.html
 $dokka.location:pro.yggdra.util////PointingToDeclaration/-java-paper/pro.yggdra.util/index.html
 $dokka.location:pro.yggdra.util/BuildsDeserializer///PointingToDeclaration/-java-paper/pro.yggdra.util/-builds-deserializer/index.html
 $dokka.location:pro.yggdra.util/BuildsDeserializer/BuildsDeserializer/#/PointingToDeclaration/-java-paper/pro.yggdra.util/-builds-deserializer/-builds-deserializer.html
@@ -104,6 +117,9 @@ $dokka.location:pro.yggdra.util/Messenger.Companion/allowed/#/PointingToDeclarat
 $dokka.location:pro.yggdra.util/Messenger.Companion/info/#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra.util/-messenger/-companion/info.html
 $dokka.location:pro.yggdra.util/Messenger///PointingToDeclaration/-java-paper/pro.yggdra.util/-messenger/index.html
 $dokka.location:pro.yggdra.util/Messenger/Messenger/#/PointingToDeclaration/-java-paper/pro.yggdra.util/-messenger/-messenger.html
+$dokka.location:pro.yggdra.util/VersionGroupBuildsDeserializer///PointingToDeclaration/-java-paper/pro.yggdra.util/-version-group-builds-deserializer/index.html
+$dokka.location:pro.yggdra.util/VersionGroupBuildsDeserializer/VersionGroupBuildsDeserializer/#/PointingToDeclaration/-java-paper/pro.yggdra.util/-version-group-builds-deserializer/-version-group-builds-deserializer.html
+$dokka.location:pro.yggdra.util/VersionGroupBuildsDeserializer/deserialize/#com.google.gson.JsonElement#java.lang.reflect.Type#com.google.gson.JsonDeserializationContext/PointingToDeclaration/-java-paper/pro.yggdra.util/-version-group-builds-deserializer/deserialize.html
 $dokka.location:pro.yggdra////PointingToDeclaration/-java-paper/pro.yggdra/index.html
 $dokka.location:pro.yggdra/JavaPaper.Companion///PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/-companion/index.html
 $dokka.location:pro.yggdra/JavaPaper.Companion/get/#/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/-companion/get.html
@@ -113,12 +129,15 @@ $dokka.location:pro.yggdra/JavaPaper/apiVersion/#/PointingToDeclaration/-java-p
 $dokka.location:pro.yggdra/JavaPaper/builds/#kotlin.String#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/builds.html
 $dokka.location:pro.yggdra/JavaPaper/builds/#pro.yggdra.objects.ProjectType#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/builds.html
 $dokka.location:pro.yggdra/JavaPaper/close/#/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/close.html
-$dokka.location:pro.yggdra/JavaPaper/info/#/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/info.html
 $dokka.location:pro.yggdra/JavaPaper/project/#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/project.html
 $dokka.location:pro.yggdra/JavaPaper/project/#pro.yggdra.objects.ProjectType/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/project.html
 $dokka.location:pro.yggdra/JavaPaper/projects/#/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/projects.html
 $dokka.location:pro.yggdra/JavaPaper/version/#kotlin.String#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version.html
 $dokka.location:pro.yggdra/JavaPaper/version/#pro.yggdra.objects.ProjectType#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version.html
+$dokka.location:pro.yggdra/JavaPaper/versionGroup/#kotlin.String#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version-group.html
+$dokka.location:pro.yggdra/JavaPaper/versionGroup/#pro.yggdra.objects.ProjectType#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version-group.html
+$dokka.location:pro.yggdra/JavaPaper/versionGroupBuilds/#kotlin.String#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version-group-builds.html
+$dokka.location:pro.yggdra/JavaPaper/versionGroupBuilds/#pro.yggdra.objects.ProjectType#kotlin.String/PointingToDeclaration/-java-paper/pro.yggdra/-java-paper/version-group-builds.html
 pro.yggdra
 pro.yggdra.objects
 pro.yggdra.objects.builder
