@@ -1,7 +1,11 @@
 <div align="center">
-<h1>JavaPaper</h1>
+
+<a href="https://asgard.lol/escapetime">
+  <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/banner.png" alt="JavaPaperAPI" draggable="false">
+</a>
+<br/><br/>
 Simple Kotlin/Java Paper API implementation
-<br/>
+<br/><br/>
 
 [![JitPack](https://jitpack.io/v/VolanDeMor1/JavaPaper.svg)](https://jitpack.io/#VolanDeMor1/JavaPaper)
 ![Kotlin](https://img.shields.io/badge/kotlin-%23f5336d.svg?style=flat&logo=kotlin&logoColor=white)
