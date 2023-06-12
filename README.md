@@ -87,21 +87,24 @@ runBlocking {
     }
     
     // Getting all Paper builds for Minecraft 1.20
-    println(javaPaper.project(ProjectType.PAPER)
-        .version("1.20")
-        .builds.joinToString()
+    println(
+        javaPaper.project(ProjectType.PAPER)
+            .version("1.20")
+            .buildIds.joinToString()
     ) // OUTPUT: 1, 2, 3, 4 ....
     
-    // Download latest Paper build for Minecraft 1.20 in downloads folder
-    javaPaper.builds(ProjectType.PAPER, "1.20")
-        .builds.last().downloads.application
-        .downloadAutoName(Path.of("downloads"))
-        .percentage { percent, speed -> // OPTIONAL
+    // Download the latest Paper build for Minecraft 1.20 to downloads folder
+    val build = paper.latestBuild(ProjectType.PAPER, "1.20")
+    println("Downloading build ${build.id}")
+    build.downloadAutoName(Path.of("downloads"))
+        // OPTIONAL START
+        .percentage { percent, speed -> 
             println("Downloaded $percent%... (Speed: $speed mb/s)")
         }
-        .after { // OPTIONAL
+        .after {
             println("Downloaded successfully!")
         }
+        // OPTIONAL END
         .start() // Starts download
 }
 ```

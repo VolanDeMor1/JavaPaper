@@ -9,4 +9,13 @@ class Builds(
     val projectName: String,
     val version: String,
     val builds: Array<Build>,
-)
+) {
+    override fun toString(): String {
+        return "Builds(\n" +
+                "\tprojectType=$projectType, \n" +
+                "\tprojectName='$projectName', \n" +
+                "\tversion='$version', \n" +
+                "\tbuilds=${builds.contentToString()}\n" +
+                ")"
+    }
+}

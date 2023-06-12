@@ -8,5 +8,6 @@ class Version(
     @SerializedName("project_name")
     val projectName: String,
     val version: String,
-    val builds: Array<Int>
+    @SerializedName("builds")
+    val buildIds: Array<Int>
 )

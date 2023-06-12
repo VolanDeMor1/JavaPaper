@@ -87,4 +87,17 @@ class Download (
         }
         return action
     }
+
+    override fun toString(): String {
+        return "Download(\n" +
+                "\tname='$name', \n" +
+                "\tsha256='$sha256', \n" +
+                "\tbuild=$build, \n" +
+                "\tprojectType=$projectType, \n" +
+                "\tprojectName='$projectName', \n" +
+                "\tversion='$version', \n" +
+                "\tdownloadLink='$downloadLink'\n" +
+                ")"
+    }
+
 }

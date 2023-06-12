@@ -16,6 +16,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.security.MessageDigest
 import java.util.jar.JarFile
+import kotlin.io.path.notExists
 
 class JavaPaper(
     val apiVersion: String? = "v2",
@@ -43,11 +44,14 @@ class JavaPaper(
             = builds(projectType, version).builds.last()
 
     suspend fun buildFrom(projectType: ProjectType, jar: String): Build? = withContext(Dispatchers.IO) {
-        val hash = Files.newInputStream(Path.of(jar)).use { inputStream ->
+        val path = Path.of(jar)
+        if (path.notExists()) return@withContext null
+
+        val hash = Files.newInputStream(path).use { inputStream ->
             MessageDigest.getInstance("SHA-256").digest(inputStream.readAllBytes()).toHex()
         }
 
-        JarFile(jar).use { jarFile ->
+        return@withContext JarFile(jar).use { jarFile ->
             val entry = jarFile.getJarEntry("META-INF/versions.list")
             if (entry != null && !entry.isDirectory) {
                 val inputStream = jarFile.getInputStream(entry)
@@ -60,8 +64,11 @@ class JavaPaper(
             }
         }
     }
-
     private fun ByteArray.toHex(): String = joinToString("") { "%02x".format(it) }
+
+    suspend fun buildFrom(projectType: ProjectType, version: String, build: Int): Build? {
+        return builds(projectType, version).builds.firstOrNull { it.id == build }
+    }
 
     suspend fun projects(): Projects {
         val response = client.get("https://api.papermc.io/$apiVersion/projects")

@@ -26,14 +26,14 @@ class JavaPaperTest {
     fun project() {
         runBlocking {
             val project = paper.project(ProjectType.PAPER)
-            println(project.version("1.19").builds.joinToString())
+            println(project.version("1.19").buildIds.joinToString())
         }
     }
 
     @Test
     fun version() {
         runBlocking {
-            println(paper.version(ProjectType.PAPER, "1.20").builds.joinToString())
+            println(paper.version(ProjectType.PAPER, "1.20").buildIds.joinToString())
         }
     }
 
@@ -41,18 +41,25 @@ class JavaPaperTest {
     fun builds() {
         runBlocking {
             paper.builds(ProjectType.PAPER, "1.20").builds.forEach { build ->
-                println(build.build)
+                println(build)
             }
         }
     }
 
     @Test
-    fun buildFrom() {
+    fun buildFromId() {
+        runBlocking {
+            val build = paper.buildFrom(ProjectType.PAPER, "1.20", 10)
+            println(build?.toString())
+        }
+    }
+
+    @Test
+    fun buildFromFile() {
         runBlocking {
             val start = getTimeMillis()
-            val build = paper.buildFrom(ProjectType.PAPER, Path.of("downloads/paper-1.20-9.jar").absolutePathString())
-            println("Build id: " + build?.build)
-            println("Build time: " + build?.time)
+            val build = paper.buildFrom(ProjectType.PAPER, Path.of("downloads/paper-1.20-10.jar").absolutePathString())
+            println(build?.toString())
             val end = getTimeMillis()
             println("Took ${end - start} ms")
         }
@@ -61,9 +68,9 @@ class JavaPaperTest {
     @Test
     fun download() {
         runBlocking {
-            paper.builds(ProjectType.PAPER, "1.20")
-                .builds.last().downloads.application
-                .downloadAutoName(Path.of("downloads"))
+            val build = paper.latestBuild(ProjectType.PAPER, "1.20")
+            println("Downloading build ${build.id}")
+            build.downloadAutoName(Path.of("downloads"))
                 .percentage { percent, speed -> // OPTIONAL
                     println("Downloaded $percent%... (Speed: $speed mb/s)")
                 }
@@ -89,7 +96,7 @@ class JavaPaperTest {
         runBlocking {
             val builds = paper.versionGroupBuilds(ProjectType.PAPER, "1.20")
             builds.builds.forEach {
-                println("${it.build} ${it.time}")
+                println("${it.id} ${it.time}")
             }
         }
     }
