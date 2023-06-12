@@ -68,6 +68,7 @@ implementation 'com.github.VolanDeMor1:JavaPaper:VERSION'
 <a href="#usage">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/usage.png" alt="Usage" draggable="false" id="usage">
 </a><br/>
+<p> </p>
 
 <a href="#kotlin">
 <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/kotlin.png" alt="Kotlin" draggable="false" id="kotlin">
