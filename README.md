@@ -1,7 +1,7 @@
 <div align="center">
 
-<a href="#">
-  <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/banner.png" alt="JavaPaperAPI" draggable="false">
+<a href="#javapaper">
+  <img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/banner.png" alt="JavaPaperAPI" draggable="false" id="javapaper">
 </a>
 <br/><br/>
 Simple Kotlin/Java Paper API implementation
@@ -12,14 +12,14 @@ Simple Kotlin/Java Paper API implementation
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white)
 </div>
 
-<a href="#">
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/installation.png" alt="Installation" draggable="false">
+<a href="#installation">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/installation.png" alt="Installation" draggable="false" id="installation">
 </a>
 <br/>
 <p> </p>
 
-<a href="#">
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/maven.png" alt="Maven" draggable="false">
+<a href="#maven">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/maven.png" alt="Maven" draggable="false" id="maven">
 </a><br/>
 <p> </p>
 
@@ -38,8 +38,8 @@ Simple Kotlin/Java Paper API implementation
 ```
 
 <br/>
-<a href="#">
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false">
+<a href="#gradlekotlin">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_kts.png" alt="Gradle Kotlin" draggable="false" id="gradlekotlin">
 </a><br/>
 <p> </p>
 
@@ -50,9 +50,9 @@ maven("https://jitpack.io")
 implementation("com.github.VolanDeMor1:JavaPaper:VERSION")
 ```
 
-<a href="#">
+<a href="#gradlegroovy">
 <br/>
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/gradle_grv.png" alt="Gradle Groovy" draggable="false" id="gradlegroovy">
 </a><br/>
 <p> </p>
 
@@ -64,12 +64,13 @@ implementation 'com.github.VolanDeMor1:JavaPaper:VERSION'
 ```
 
 <br/><br/>
-<a href="#">
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/usage.png" alt="Usage" draggable="false">
+
+<a href="#usage">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/usage.png" alt="Usage" draggable="false" id="usage">
 </a><br/>
 
-<a href="#">
-<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/kotlin.png" alt="Kotlin" draggable="false">
+<a href="#kotlin">
+<img src="https://raw.githubusercontent.com/VolanDeMor1/JavaPaper/master/images/kotlin.png" alt="Kotlin" draggable="false" id="kotlin">
 </a><br/>
 <p> </p>
 
