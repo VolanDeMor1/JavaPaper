@@ -8,8 +8,11 @@ Simple Kotlin/Java Paper API implementation
 <br/><br/>
 
 [![JitPack](https://jitpack.io/v/VolanDeMor1/JavaPaper.svg)](https://jitpack.io/#VolanDeMor1/JavaPaper)
-![Kotlin](https://img.shields.io/badge/kotlin-%23f5336d.svg?style=flat&logo=kotlin&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white)
+[![Downloads](https://img.shields.io/github/v/release/VolanDeMor1/JavaPaper?label=Download&include_prereleases&logo=dpd&logoColor=F5F5F5)](https://github.com/VolanDeMor1/JavaPaper/releases)
+[![Discord](https://img.shields.io/discord/646285836500860929?color=7289DA&label=Discord&logo=discord&logoColor=F5F5F5)](https://discord.gg/5cP9mkcnu2)
+
+[![Kotlin](https://img.shields.io/badge/Kotlin-%23f5336d.svg?style=flat&logo=Kotlin&logoColor=white)](https://kotlinlang.org/)
+[![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=flat&logo=Gradle&logoColor=white)](https://gradle.org/)
 </div>
 
 <a href="#installation">
